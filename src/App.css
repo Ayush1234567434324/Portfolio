@@ -1,38 +1,227 @@
-.App {
-  text-align: center;
+/* Global Styles */
+body {
+  background: #e5e7eb;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Hero Section */
+.hero-section {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+ width: 1100px;
+ 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+.profile-picture-container {
+  
+  display: flex;
+  justify-content: start;
+  margin-left: 10px;
+}
+
+.profile-picture {
+  border: 3px solid #2d2e32;
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  position: relative;
+  background-position: center;
+  animation: morph 8s ease-in-out infinite;
+  transition: all 1s ease-in-out;
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Tech Stack */
+.tech-stack {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.tech-stack-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.tech-stack-divider {
+  margin-top: 8px;
+  width: 8rem;
+  border-top: 2px solid #000;
+}
+
+.tech-stack-icons ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 1rem;
+  padding: 0;
+}
+
+.tech-stack-icons img {
+  width: 110px;
+  height: 64px;
+  transition: transform 0.3s ease;
+}
+
+.tech-stack-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column-reverse;
+    justify-content: center;
+    margin-left: 0.4%;
+   
+  }
+
+  .profile-picture {
+    height: 250px;
+    width: 250px;
+  }
+
+  .hero-title {
+    font-size: 2.2rem !important;
+    line-height: 0.8 !important;
+    text-align: center !important;
+   
+  }
+
+  .profile-picture-container {
+    justify-content: center;
+    margin-left: -12px;
+  }
+
+  .hero-description {
+    font-size: 1rem !important;
+    padding-top: 0.5rem;
+    text-align: center !important;
+  }
+
+  .tech-stack-title {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .hero-header
+  {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  .tech-stack-icons
+  {
+    display: flex;
+    justify-content: center;
+  }
+  .tech-stack-icons img {
+    width: 140px;
+    
+    
+  }
+  .tech-stack-icons-center
+  {
+    justify-content: center;
+  }
+  .icon-flex
+  {
+    justify-content: center;
+  }
+}
+
+/* Navbar Styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: #fff;
+  color: #000;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  cursor: pointer;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+ul li a:hover {
+  color: #f0a500;
+}
+
+/* Mobile Menu Icon */
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+/* Styles for Mobile Navigation */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  padding: 1rem;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 1001;
+}
+
+.mobile-nav.open-menu {
+  transform: translateX(0);
+}
+
+.mobile-nav span {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.mobile-nav ul {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 1.5rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mobile-nav ul li a {
+  color: #000;
+  font-size: 1.2rem;
+  text-decoration: none;
 }
