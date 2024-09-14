@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import './App.css';
 import About from './components/About';
-import Profilepic from './components/Profilepic';
 import Contact from './navbar/Contact';
 import Navbar from './navbar/Navbar';
 
@@ -14,7 +13,7 @@ function App() {
   
   return (
   <>
-    <Navbar mode={mode} toggleMode={toggleMode} />
+  <Navbar mode={mode} toggleMode={toggleMode} />
   <div className='pt-12'></div>
    <About/>   
    <div className='pt-10'></div>
