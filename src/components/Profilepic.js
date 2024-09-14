@@ -16,6 +16,7 @@ export default function Profilepic() {
               background: `url(${pfp})`,
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',
+              
             }}
           ></div>
         </div>
