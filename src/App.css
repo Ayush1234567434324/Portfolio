@@ -225,3 +225,8 @@ ul li a:hover {
   font-size: 1.2rem;
   text-decoration: none;
 }
+
+.map.dark
+{
+   filter: grayscale(1) invert(1);
+}
