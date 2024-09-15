@@ -32,7 +32,7 @@ const Navbar = ({ mode, toggleMode }) => {
         onChange={toggleMode}  // Removed redundant isDarkMode state
         moonColor='yellow'
         sunColor='orange'
-        size={35}
+        size={24}
       /></div>
       
       </div>
@@ -75,7 +75,7 @@ const Navbar = ({ mode, toggleMode }) => {
         onChange={toggleMode}  // Removed redundant isDarkMode state
         moonColor='yellow'
         sunColor='black'
-        size={35}
+        size={24}
       /></div>
       </div>
 
