@@ -21,12 +21,15 @@ const Navbar = ({ mode, toggleMode }) => {
   ];
 
   return (
-    <div className={`flex justify-between items-center h-24 mx-auto px-4 ${mode === 'dark' ? 'bg-black text-white' : 'bg-white text-black'}`}>
+    <div className={`flex justify-between items-center h-20 mx-auto px-4 ${mode === 'dark' ? 'bg-black text-white' : 'bg-white text-black'}`}>
       {/* Logo */}
-      <div className='flex flex-row gap-4'>
-      <h1 className={`w-full text-[24px] font-bold ${mode === 'dark' ? 'text-[#00df9a]' : 'rgb(75, 75, 75)'}`}>Ayush.dev
+      <div className='flex flex-row gap-2 mt-4'>
+        <div>
+        <h1 className={`w-full text-[24px] font-bold ${mode === 'dark' ? 'text-[#00df9a]' : 'rgb(75, 75, 75)'}`}>Ayush.dev
       </h1>
-      <div>     <DarkModeSwitch
+        </div>
+     
+      <div className='mt-[0.3rem]'>     <DarkModeSwitch
         style={{ marginBottom: '2rem' }}
         checked={mode === 'dark'}
         onChange={toggleMode}  // Removed redundant isDarkMode state
@@ -42,7 +45,7 @@ const Navbar = ({ mode, toggleMode }) => {
         {navItems.map(item => (
           <li
             key={item.id}
-            className={`p-4 rounded-xl m-2 cursor-pointer duration-300 ${mode === 'dark' ? 'hover:bg-[#00df9a] hover:text-black' : 'hover:bg-blue-500 hover:text-white'}`}
+            className={`p-4 pb-2 m-2 mt-0 border-b-4 border-transparent ${mode === 'dark' ? 'hover:border-b-[#00df9a]' : 'hover:border-b-blue-500'} hover:border-b-4 transition-all duration-300`}
           >
             {item.text}
           </li>
@@ -67,14 +70,17 @@ const Navbar = ({ mode, toggleMode }) => {
       >
         {/* Mobile Logo */}
         <div className='flex flex-row'>
-        <h1 className={`w-[50%] text-[24px] font-bold m-4 ${mode === 'dark' ? 'text-[#00df9a]' : 'text-black'}`}>Ayush.dev</h1>
+          <div>
+          <h1 className={`w-full text-[24px] font-bold m-4 ${mode === 'dark' ? 'text-[#00df9a]' : 'text-black'}`}>Ayush.dev</h1>
+          </div>
+       
 
-      <div className='mt-4'>     <DarkModeSwitch
+      <div className='mt-5'>     <DarkModeSwitch
         style={{ marginBottom: '2rem' }}
         checked={mode === 'dark'}
         onChange={toggleMode}  // Removed redundant isDarkMode state
         moonColor='yellow'
-        sunColor='black'
+        sunColor='orange'
         size={26}
       /></div>
       </div>
@@ -83,7 +89,7 @@ const Navbar = ({ mode, toggleMode }) => {
         {navItems.map(item => (
           <li
             key={item.id}
-            className={`p-4 border-b rounded-xl duration-300 cursor-pointer border-gray-600 ${mode === 'dark' ? 'hover:bg-[#00df9a] hover:text-black' : 'hover:bg-blue-500 hover:text-white'}`}
+            className={`p-4 border-b-2 border-transparent duration-300 cursor-pointer border-gray-600 ${mode === 'dark' ? 'hover:border-b-[#00df9a]' : 'hover:border-b-blue-500'} hover:border-b-2 transition-all duration-300`}
           >
             {item.text}
           </li>
