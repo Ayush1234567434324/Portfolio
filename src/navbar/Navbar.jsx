@@ -14,23 +14,24 @@ const Navbar = ({ mode, toggleMode }) => {
   // Array containing navigation items
   const navItems = [
     { id: 1, text: 'Home' },
-    { id: 2, text: 'About' },
-    { id: 3, text: 'Projects' },
-    { id: 4, text: 'Contact' }
+    { id: 2, text: 'Company' },
+    { id: 3, text: 'Resources' },
+    { id: 4, text: 'About' },
+    { id: 5, text: 'Contact' },
   ];
 
   return (
-    <div className={`flex justify-between items-center h-24 mx-auto px-4 ${mode === 'dark' ? 'bg-black text-white' : 'bg-white rgba(25, 25, 25, 0.87)'}`}>
+    <div className={`flex justify-between items-center h-24 mx-auto px-4 ${mode === 'dark' ? 'bg-black text-white' : 'bg-white text-black'}`}>
       {/* Logo */}
       <div className='flex flex-row gap-4'>
-      <h1 className={`w-full text-[28px] font-bold ${mode === 'dark' ? 'text-[#00df9a]' : 'rgb(75, 75, 75)'}`}>Ayush.dev
+      <h1 className={`w-full text-[] font-bold ${mode === 'dark' ? 'text-[#00df9a]' : 'rgb(75, 75, 75)'}`}>Ayush.dev
       </h1>
       <div>     <DarkModeSwitch
         style={{ marginBottom: '2rem' }}
         checked={mode === 'dark'}
         onChange={toggleMode}  // Removed redundant isDarkMode state
         moonColor='yellow'
-        sunColor='#36454F'
+        sunColor='orange'
         size={35}
       /></div>
       
@@ -67,7 +68,7 @@ const Navbar = ({ mode, toggleMode }) => {
         {/* Mobile Logo */}
         <div className='flex flex-row'>
         <h1 className={`w-[50%] text-[28px] font-bold m-4 ${mode === 'dark' ? 'text-[#00df9a]' : 'text-black'}`}>Ayush.dev</h1>
-        
+
       <div className='mt-4'>     <DarkModeSwitch
         style={{ marginBottom: '2rem' }}
         checked={mode === 'dark'}
