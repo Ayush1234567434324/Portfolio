@@ -24,7 +24,7 @@ const Navbar = ({ mode, toggleMode }) => {
     <div className={`flex justify-between items-center h-24 mx-auto px-4 ${mode === 'dark' ? 'bg-black text-white' : 'bg-white text-black'}`}>
       {/* Logo */}
       <div className='flex flex-row gap-4'>
-      <h1 className={`w-full text-[] font-bold ${mode === 'dark' ? 'text-[#00df9a]' : 'rgb(75, 75, 75)'}`}>Ayush.dev
+      <h1 className={`w-full text-[24px] font-bold ${mode === 'dark' ? 'text-[#00df9a]' : 'rgb(75, 75, 75)'}`}>Ayush.dev
       </h1>
       <div>     <DarkModeSwitch
         style={{ marginBottom: '2rem' }}
@@ -32,7 +32,7 @@ const Navbar = ({ mode, toggleMode }) => {
         onChange={toggleMode}  // Removed redundant isDarkMode state
         moonColor='yellow'
         sunColor='orange'
-        size={24}
+        size={28}
       /></div>
       
       </div>
@@ -67,7 +67,7 @@ const Navbar = ({ mode, toggleMode }) => {
       >
         {/* Mobile Logo */}
         <div className='flex flex-row'>
-        <h1 className={`w-[50%] text-[28px] font-bold m-4 ${mode === 'dark' ? 'text-[#00df9a]' : 'text-black'}`}>Ayush.dev</h1>
+        <h1 className={`w-[50%] text-[24px] font-bold m-4 ${mode === 'dark' ? 'text-[#00df9a]' : 'text-black'}`}>Ayush.dev</h1>
 
       <div className='mt-4'>     <DarkModeSwitch
         style={{ marginBottom: '2rem' }}
@@ -75,7 +75,7 @@ const Navbar = ({ mode, toggleMode }) => {
         onChange={toggleMode}  // Removed redundant isDarkMode state
         moonColor='yellow'
         sunColor='black'
-        size={24}
+        size={28}
       /></div>
       </div>
 
