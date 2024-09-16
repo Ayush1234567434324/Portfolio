@@ -28,7 +28,7 @@ function App() {
   return (
     <>
       <Navbar mode={mode} toggleMode={toggleMode} />
-      <main className="pt-16">
+      <main className="pt-12">
         <About />
       </main>
       <section className="pt-10 ml-[5%] flex flex-col justify-center w-[90%]">
