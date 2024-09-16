@@ -21,7 +21,7 @@ const Navbar = ({ mode, toggleMode }) => {
   ];
 
   return (
-    <div className={`flex justify-between items-center h-20 mx-auto px-4 ${mode === 'dark' ? 'bg-black text-white' : 'bg-white text-black'}`}>
+    <div className={`flex justify-between items-center h-20 mx-auto px-4 ${mode === 'dark' ? 'bg-black text-white' : 'border shadow-lg bg-white text-black'}`}>
       {/* Logo */}
       <div className='flex flex-row gap-2 mt-4'>
         <div>
